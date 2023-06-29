@@ -1,5 +1,3 @@
-# Crear una función de saludo
+from funciones.saludo import saludo
 
-# Pasar los inputs del usuario al modelo tuneado
-
-# Desplegar los resultados del modelo tuneado
+saludo()
