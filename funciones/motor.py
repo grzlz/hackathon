@@ -2,7 +2,7 @@ import openai
 from api_call import get_gpt_response
 
 # Replace with your own API key
-openai.api_key = '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'
+openai.api_key = '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'
 
 
 def chatbunny():
