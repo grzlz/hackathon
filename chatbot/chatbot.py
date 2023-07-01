@@ -4,10 +4,12 @@ from dotenv import load_dotenv
 from twilio.twiml.messaging_response import MessagingResponse
 from twilio.rest import Client 
 
-# sid = os.getenv("TWILIO_SID")
-# auth_token = os.getenv("TWILIO_TOKEN")
+load_dotenv()
 
-# client = Client(sid, auth_token)
+sid = os.getenv("TWILIO_SID")
+auth_token = os.getenv("TWILIO_TOKEN")
+
+client = Client(sid, auth_token)
 
 app = Flask(__name__)
 
@@ -16,14 +18,13 @@ def respond(message):
     response.message(message)
     return str(response)
 
-@app.route("/")
+@app.route("/", methods = ["GET"])
 def home():
     return "Home"
 
-@app.route("/message")
+@app.route("/message", methods = ["POST"])
 def reply():
     message = request.form.get("Body").lower()
-    respond(message)
-    return None 
+    return respond(message)
 
 app.run(debug=True, port=5020)
