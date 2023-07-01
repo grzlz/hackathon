@@ -23,6 +23,7 @@ def home():
 @app.route("/message")
 def reply():
     message = request.form.get("Body").lower()
+    respond(message)
     return None 
 
 app.run(debug=True, port=5020)
