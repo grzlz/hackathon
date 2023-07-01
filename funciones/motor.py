@@ -2,9 +2,9 @@ import openai
 from api_call import get_gpt_response
 
 # Replace with your own API key
-openai.api_key = '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'
+openai.api_key = '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'
 
-
+context = ""
 def chatbunny():
     print("Hola, soy ChatBunny yeyeye!")
     while True:
