@@ -6,7 +6,7 @@ openai.api_key = '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'
 def get_gpt_response(prompt):
     response = openai.Completion.create(
     engine="text-davinci-003",
-    prompt = prompt ,
+    prompt = f"Mi nombre es Andres. {prompt}" ,
     max_tokens=60)
     return(response.choices[0].text.strip())
  
