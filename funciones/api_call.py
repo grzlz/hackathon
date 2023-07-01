@@ -9,5 +9,4 @@ def get_gpt_response(prompt):
     prompt = prompt ,
     max_tokens=60)
     return(response.choices[0].text.strip())
-
-get_gpt_response()
+ 

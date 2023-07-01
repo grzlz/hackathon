@@ -1,0 +1,13 @@
+name: chatbunny
+title: chatbunny
+username:
+account: grzlz
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9392001
+bundleId: 7408161
+url: https://grzlz.shinyapps.io/chatbunny/
+when: 1688169890.58735
+lastSyncTime: 1688169890.58738
+asMultiple: FALSE
+asStatic: FALSE
