@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, request
 from dotenv import load_dotenv
 from twilio.twiml.messaging_response import MessagingResponse
 from twilio.rest import Client 
@@ -11,12 +11,18 @@ from twilio.rest import Client
 
 app = Flask(__name__)
 
+def respond(message):
+    response = MessagingResponse()
+    response.message(message)
+    return str(response)
+
 @app.route("/")
 def home():
     return "Home"
 
 @app.route("/message")
 def reply():
+    message = request.form.get("Body").lower()
     return None 
 
 app.run(debug=True, port=5020)
